@@ -10,10 +10,13 @@ const server = express()
 
 server.use(helmet())
 server.use(express.json())
-server.use(cors(
-    corsOptions
-))
+// server.use(cors(
+//     corsOptions
+// ))
 
-server.get('/', ,(req, res) => {
+server.get('/', (req, res) => {
     res.send(`Server's Working!`)
 })
+
+
+module.exports = server;
